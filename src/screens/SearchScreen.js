@@ -23,8 +23,7 @@ const SearchScreen = () => {
         onTermSubmit={() => searchApi(term)}
       ></SearchBar>
       {errorMessage ? <Text>{errorMessage}</Text> : null}
-      <Text>We have found {results.length} results</Text>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 4 }}>
         <ResultList
           results={filterResultsByPrice("$")}
           title="Cost Effective"
